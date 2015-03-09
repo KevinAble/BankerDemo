@@ -38,6 +38,14 @@ angular.module('demobanking', ['ionic', 'starter.controllers'])
       }
     }
   })
+  .state('app.transactions', {
+      url: "/transactions",
+      views: {
+          'menuContent': {
+              templateUrl: "templates/transactions.html"
+          }
+      }
+  })
 
   .state('app.alert', {
       url: "/alert",
