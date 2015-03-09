@@ -33,27 +33,14 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
 
 
 .controller('transferAccounts', function($scope) {
     $scope.transferAccounts = [
-        {name: '0000109xxx - RIB03xxxx Available Balance: 0.00', id: 1},
-        {name: '0000205xxx - RIB03xxxx Available Balance: 0.00', id: 2},
-        {name: '0000426xxx - RIB03xxxx Available Balance: 0.00', id: 3},
-        {name: '0000525xxx - RIB03xxxx Available Balance: 0.00', id: 4},
-        {name: '0000709xxx - RIB03xxxx Available Balance: 0.00', id: 5}
+        { name: '0000109xxx - RIB03xxxx Available Balance: 0.00', id: 1 },
+        { name: '0000205xxx - RIB03xxxx Available Balance: 0.00', id: 2 },
+        { name: '0000426xxx - RIB03xxxx Available Balance: 0.00', id: 3 },
+        { name: '0000525xxx - RIB03xxxx Available Balance: 0.00', id: 4 },
+        { name: '0000709xxx - RIB03xxxx Available Balance: 0.00', id: 5 }
     ];
-})
+});
