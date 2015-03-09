@@ -6,6 +6,8 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var concatCss = require('gulp-concat-css');
+var gulpIgnore = require('gulp-ignore');
 
 var paths = {
   sass: ['./scss/**/*.scss']
@@ -17,10 +19,12 @@ gulp.task('sass', function(done) {
     gulp.src(paths.sass)
     .pipe(sass())
     .pipe(gulp.dest('./www/css/'))
-    .pipe(minifyCss({
-      keepSpecialComments: 0
-    }))
     .pipe(rename({ extname: '.min.css' }))
+    .pipe(concatCss('bundle.css'))
+    .pipe(minifyCss({
+        keepSpecialComments: 0
+    }))
+    .pipe(gulpIgnore.exclude('**.app.**'))
     .pipe(gulp.dest('./www/css/'))
     .on('end', done);
 });
