@@ -46,3 +46,14 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+
+
+.controller('transferAccounts', function($scope) {
+    $scope.transferAccounts = [
+        {name: '0000109xxx - RIB03xxxx Available Balance: 0.00', id: 1},
+        {name: '0000205xxx - RIB03xxxx Available Balance: 0.00', id: 2},
+        {name: '0000426xxx - RIB03xxxx Available Balance: 0.00', id: 3},
+        {name: '0000525xxx - RIB03xxxx Available Balance: 0.00', id: 4},
+        {name: '0000709xxx - RIB03xxxx Available Balance: 0.00', id: 5}
+    ];
+})
