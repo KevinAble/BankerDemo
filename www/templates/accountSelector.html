@@ -9,6 +9,14 @@
                    ng-model="transfer.fromAccountId">
             {{account.owner}}/{{account.accountNumber}}/{{account.accountDescription}}
         </ion-radio>
+
+        <div class="card">
+            <div class="item item-text-wrap">
+                {{transfer.fromAccountId}}
+            </div>
+        </div>
+
+
         <button class="button button-full button-positive" ng-click="closeAccountSelector()">Done</button>
     </ion-content>
 </ion-modal-view>
