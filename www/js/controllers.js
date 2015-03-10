@@ -42,34 +42,32 @@ angular.module('starter.controllers', [])
     // Triggered in the accountSelector modal to close it
     $scope.closeAccountSelector = function () {
         $scope.accountSelector.hide();
+        $scope.$apply();
     };
 
-
-    $scope.tasks = [
-      { title: 'Collect coins test' },
-      { title: 'Eat mushrooms' },
-      { title: 'Get high enough to grab the flag' },
-      { title: 'Find the Princess' }
-    ];
-
     $scope.accounts = [
-      { accountId: 1, owner: 'Bauer Leasing Inc', accountNumber: '**61500', accountDescription: 'CIH SPRAYER'},
-      { accountId: 2, owner: 'Bauer Leasing Inc', accountNumber: '**77301', accountDescription: '3320 SPRAYER' },
-      { accountId: 3, owner: 'D & K Larsen Farms Inc', accountNumber: '**36399', accountDescription: 'Svc Acct' },
-      { accountId: 4, owner: 'D & K Larsen Farms Inc', accountNumber: '**67200', accountDescription: 'Operating' },
-      { accountId: 5, owner: 'D & K Larsen Farms Inc', accountNumber: '**30103', accountDescription: '07 Cat Trctr' },
-      { accountId: 6, owner: 'D & K Larsen Farms Inc', accountNumber: '**80501', accountDescription: '8360 Tractor' },
-      { accountId: 7, owner: 'Dane M Larsen', accountNumber: '**11699', accountDescription: 'Svc Acct' },
-      { accountId: 8, owner: 'Dane M Larsen', accountNumber: '**28101', accountDescription: 'Bin & Tile' },
-      { accountId: 9, owner: 'Dane M Larsen', accountNumber: '**25501', accountDescription: 'S 5-139-50' }
+      { accountId: 1, owner: 'Bauer Leasing Inc', accountNumber: '**61500', accountDescription: 'CIH SPRAYER', balance: 1234.56},
+      { accountId: 2, owner: 'Bauer Leasing Inc', accountNumber: '**77301', accountDescription: '3320 SPRAYER', balance: 543.21},
+      { accountId: 3, owner: 'D & K Larsen Farms Inc', accountNumber: '**36399', accountDescription: 'Svc Acct', balance: 987.56 },
+      { accountId: 4, owner: 'D & K Larsen Farms Inc', accountNumber: '**67200', accountDescription: 'Operating', balance: 567.89 },
+      { accountId: 5, owner: 'D & K Larsen Farms Inc', accountNumber: '**30103', accountDescription: '07 Cat Trctr', balance: 9876.54 },
+      { accountId: 6, owner: 'D & K Larsen Farms Inc', accountNumber: '**80501', accountDescription: '8360 Tractor', balance: 20000.00 },
+      { accountId: 7, owner: 'Dane M Larsen', accountNumber: '**11699', accountDescription: 'Svc Acct', balance: 2000.00 },
+      { accountId: 8, owner: 'Dane M Larsen', accountNumber: '**28101', accountDescription: 'Bin & Tile', balance: 0.00 },
+      { accountId: 9, owner: 'Dane M Larsen', accountNumber: '**25501', accountDescription: 'S 5-139-50', balance: 0.00 }
     ];
 
     $scope.transfer = {
-        fromAccountId: 0,
-        toAccountId: 0,
-        amount: 0,
+        fromAccountId: 1,
+        toAccountId: 1,
+        amount: 100,
         comment: null
     };
-})
 
+    $scope.fromAccount = function () {
+        var x = _.find($scope.accounts, { accountId: '1' });
+        console.log(x);
+        return 'this is a test';
+    };
+})
 

@@ -10,15 +10,8 @@
 
         <div class="card">
             <div class="item item-text-wrap">
-                This is a basic Card which contains an item that has wrapping text.
+                {{fromAccount().accountNumber}}
             </div>
         </div>
-
-                <!-- our list and list items -->
-                <ion-list>
-                    <ion-item ng-repeat="task in tasks">
-                        {{task.title}}
-                    </ion-item>
-                </ion-list>
     </ion-content>
 </ion-view>
