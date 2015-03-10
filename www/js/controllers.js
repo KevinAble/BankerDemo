@@ -58,16 +58,18 @@ angular.module('starter.controllers', [])
     ];
 
     $scope.transfer = {
-        fromAccountId: 1,
-        toAccountId: 1,
-        amount: 100,
+        fromAccountId: null,
+        toAccountId: null,
+        amount: null,
         comment: null
     };
 
     $scope.fromAccount = function () {
-        var x = _.find($scope.accounts, { accountId: '1' });
-        console.log(x);
-        return 'this is a test';
+        return _.where($scope.accounts, { 'accountId': $scope.transfer.fromAccountId })[0];
+    };
+
+    $scope.toAccount = function () {
+        return _.where($scope.accounts, { 'accountId': $scope.transfer.toAccountId })[0];
     };
 })
 

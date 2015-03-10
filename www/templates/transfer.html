@@ -8,9 +8,20 @@
             From Account
         </button>
 
-        <div class="card">
+        <div class="card" ng-if="transfer.fromAccountId">
             <div class="item item-text-wrap">
-                {{fromAccount().accountNumber}}
+                {{fromAccount().owner}}/{{fromAccount().accountNumber}}/{{fromAccount().accountDescription}}
+            </div>
+        </div>
+
+        <button class="button button-clear button-positive icon-right ion-chevron-right"
+                ng-click="accountSelector.show()">
+            To Account
+        </button>
+
+        <div class="card" ng-if="transfer.toAccountId">
+            <div class="item item-text-wrap">
+                {{fromAccount().owner}}/{{fromAccount().accountNumber}}/{{fromAccount().accountDescription}}
             </div>
         </div>
     </ion-content>
