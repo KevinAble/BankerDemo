@@ -39,10 +39,11 @@ angular.module('demobanking', ['ionic', 'starter.controllers'])
     }
   })
   .state('app.transactions', {
-      url: "/transactions",
+      url: "/transactions/:accountid",
       views: {
           'menuContent': {
-              templateUrl: "templates/transactions.html"
+              templateUrl: "templates/transactions.html",
+              controller: 'TransactionCtrl'
           }
       }
   })
