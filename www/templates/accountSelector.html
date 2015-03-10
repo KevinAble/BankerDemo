@@ -1,0 +1,14 @@
+﻿<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">Select Account</h1>
+        <button class="button button-clear button-primary" ng-click="accountSelector.hide()">Cancel</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <ion-radio ng-repeat="account in accounts"
+                   ng-value="account.accountId"
+                   ng-model="transfer.fromAccountId">
+            {{account.owner}}/{{account.accountNumber}}/{{account.accountDescription}}
+        </ion-radio>
+        <button class="button button-full button-positive" ng-click="closeAccountSelector()">Done</button>
+    </ion-content>
+</ion-modal-view>
