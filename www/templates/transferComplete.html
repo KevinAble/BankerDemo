@@ -1,0 +1,28 @@
+﻿<ion-view view-title="Transfer">
+    <ion-content>
+        <div class="item item-divider item-balanced">
+            Transfer success, confirmation number 16433A4F
+        </div>
+        <div class="row">
+            <div class="col col-20">From:</div>
+            <div class="col col-80">{{fromAccount().owner}}/{{fromAccount().accountNumber}}/{{fromAccount().accountDescription}}</div>
+        </div>
+        <div class="row">
+            <div class="col col-20">To:</div>
+            <div class="col col-80">{{toAccount().owner}}/{{toAccount().accountNumber}}/{{toAccount().accountDescription}}</div>
+        </div>
+        <div class="row">
+            <div class="col col-20">Amount:</div>
+            <div class="col col-80">{{transfer.amount}}</div>
+        </div>
+        <div class="row">
+            <div class="col col-20">Comment:</div>
+            <div class="col col-80">{{transfer.comment}}</div>
+        </div>
+        <div class="row row-center">
+            <div class="col col-center">
+                <a nav-clear menu-close class="button button-full button-positive" href="#app/main">Continue</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

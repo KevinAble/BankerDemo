@@ -1,41 +1,44 @@
 <ion-view view-title="Transfer">
     <ion-content>
 
-        <div class='list'>
-            <div class="item item-input">
-                <button class="button button-clear button-positive icon-right ion-chevron-right" ng-click="showAccountSelector('from')">
-                    From Account
-                </button>
+        <div class='row'>
+            <div class="col col-33  col-center">
+                <a  ng-click="showAccountSelector('from')">From Account <i class =" icon-right ion-chevron-right"></i></a>
             </div>
-            <div class="item item-input" ng-if="transfer.fromAccountId">
+            <div class="col col-66 col-center" ng-if="transfer.fromAccountId">
                 <label>
                     {{fromAccount().owner}}/{{fromAccount().accountNumber}}/{{fromAccount().accountDescription}}
                 </label>
             </div>
-
-            <div class="item item-input">
-                <button class="button button-clear button-positive icon-right ion-chevron-right"
-                        ng-click="showAccountSelector('to')">
-                    To Account
-                </button>
+        </div>
+        <div class ="row">
+            <div class="col col-33  col-center " style="padding-top: 15px;padding-bottom: 15px;">
+                    <a  ng-click="showAccountSelector('to')">To Account<i class=" icon-right ion-chevron-right"></i></a>
             </div>
-            <div class="item item-input" ng-if="transfer.toAccountId">
+            <div class="col col-66 col-center" ng-if="transfer.toAccountId">
                 <label>
                     {{toAccount().owner}}/{{toAccount().accountNumber}}/{{toAccount().accountDescription}}
                 </label>
             </div>
+        </div>
+        <div class="row">
+            <div class="col col-33  col-center">Transfer Amount</div>
+            <div class="col col-66 col-center">
+                <input type="text" ng-model="transfer.amount">
+            </div>
 
-            <label class="item item-input">
-                <span class="input-label">Transfer Amount</span>
-                <input type="text">
-            </label>
-
-            <label class="item item-input" >
-                <span class="input-label">Comment</span>
-                <input type="text">
-            </label>
-
-        </div>    
-        <button class="button button-full button-positive" ng-click="closeAccountSelector()">Done</button>    
+        </div>
+        <div class="row">
+            <div class="col col-33  col-center">Comment</div>
+            <div class="col col-66 col-center">
+                <input type="text" ng-model="transfer.comment">
+            </div>
+        </div >
+        <!--<button class="button button-full button-positive" ng-click="closeAccountSelector()">Transfer</button>-->
+        <div class ="row">
+            <div class="col col-50"><a nav-clear menu-close class="button button-full button-positive" href="#/app/main">Cancel</a>  </div>
+            <div class="col col-50"><a class="button button-full button-positive" href="#/app/transferComplete">Transfer</a>  </div>
+        </div>
+        
     </ion-content>
 </ion-view>

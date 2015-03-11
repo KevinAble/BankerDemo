@@ -65,6 +65,14 @@ angular.module('demobanking', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.transferComplete', {
+        url: "/transferComplete",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/transferComplete.html"
+            }
+        }
+    })
   .state('app.approval', {
       url: "/approval",
     views: {

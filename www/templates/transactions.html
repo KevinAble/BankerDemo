@@ -4,7 +4,7 @@
             Account Transactions Summary {{vm.accountid}}
             01/09/2014
         </div>
-        <ul ng-repeat="transaction in vm.tranactions">
+        <ul ng-repeat="transaction in vm.tranactions ">
             <li class="item item-icon-right item-text-wrap item-stable">
                 <b>{{transaction.date}} </b>{{transaction.description}}
                 <span class="item-note">{{transaction.amount}}</span>

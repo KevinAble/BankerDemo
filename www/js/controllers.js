@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
     };
 
     // Create the AccountSelector Modal Dialog
-    $ionicModal.fromTemplateUrl('templates/accountselector.html', {
+    $ionicModal.fromTemplateUrl('templates/accountSelector.html', {
         scope: $scope
     }).then(function (modal) {
         $scope.accountSelector = modal;
