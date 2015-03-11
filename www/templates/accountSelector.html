@@ -4,12 +4,18 @@
         <button class="button button-clear button-primary" ng-click="accountSelector.hide()">Cancel</button>
     </ion-header-bar>
     <ion-content class="padding">
-        <ion-radio ng-repeat="account in accounts"
+        <ion-radio ng-if="accountSelectorMode === 'from'"
+                   ng-repeat="account in accounts"
                    ng-value="account.accountId"
                    ng-model="transfer.fromAccountId">
             {{account.owner}}/{{account.accountNumber}}/{{account.accountDescription}}
         </ion-radio>
-
+        <ion-radio ng-if="accountSelectorMode === 'to'"
+                   ng-repeat="account in accounts"
+                   ng-value="account.accountId"
+                   ng-model="transfer.toAccountId">
+            {{account.owner}}/{{account.accountNumber}}/{{account.accountDescription}}
+        </ion-radio>
         <button class="button button-full button-positive" ng-click="closeAccountSelector()">Done</button>
     </ion-content>
 </ion-modal-view>

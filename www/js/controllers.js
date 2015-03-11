@@ -39,6 +39,13 @@ angular.module('starter.controllers', [])
         $scope.accountSelector = modal;
     });
 
+    $scope.accountSelectorMode = 'from';
+
+    $scope.showAccountSelector = function (mode) {
+        $scope.accountSelectorMode = mode;
+        $scope.accountSelector.show();
+    };
+
     // Triggered in the accountSelector modal to close it
     $scope.closeAccountSelector = function () {
         $scope.accountSelector.hide();
