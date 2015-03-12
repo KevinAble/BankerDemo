@@ -7,13 +7,15 @@
         <ion-radio ng-if="accountSelectorMode === 'from'"
                    ng-repeat="account in accounts"
                    ng-value="account.accountId"
-                   ng-model="transfer.fromAccountId">
+                   ng-model="transfer.fromAccountId"
+                   class="item-text-wrap">
             {{account.owner}}/{{account.accountNumber}}/{{account.accountDescription}}
         </ion-radio>
         <ion-radio ng-if="accountSelectorMode === 'to'"
                    ng-repeat="account in accounts"
                    ng-value="account.accountId"
-                   ng-model="transfer.toAccountId">
+                   ng-model="transfer.toAccountId"
+                   class="item-text-wrap">
             {{account.owner}}/{{account.accountNumber}}/{{account.accountDescription}}
         </ion-radio>
         <button class="button button-full button-positive" ng-click="closeAccountSelector()">Done</button>

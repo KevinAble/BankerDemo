@@ -1,8 +1,8 @@
 <ion-view view-title="Transactions" ng-controller="TransactionCtrl as vm">
     <ion-content>
         <div class="item item-divider item-balanced">
-            Account Transactions Summary {{vm.accountid}}
-            01/09/2014
+            Account Transactions Summary 01/09/2014 <br/>
+            {{vm.accountid}}
         </div>
         <ul ng-repeat="transaction in vm.tranactions ">
             <li class="item item-icon-right item-text-wrap item-stable">

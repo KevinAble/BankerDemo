@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state) {
     // Form data for the login modal
     $scope.loginData = {};
 
@@ -51,6 +51,7 @@ angular.module('starter.controllers', [])
         $scope.accountSelector.hide();
         $scope.$apply();
     };
+
 
     $scope.accounts = [
       { accountId: 1, owner: 'Bauer Leasing Inc', accountNumber: '**61500', accountDescription: 'CIH SPRAYER', balance: 1234.56},
