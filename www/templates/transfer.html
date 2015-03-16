@@ -2,8 +2,9 @@
     <ion-content>
 
         <div class='row'>
-            <div class="col col-33  col-center">
-                <a  ng-click="showAccountSelector('from')">From Account <i class =" icon-right ion-chevron-right"></i></a>
+            <div class="col col-40  col-center">
+                Account <br/>
+                <a ng-click="showAccountSelector('from')">From <i class=" icon-right ion-chevron-right"></i></a>
             </div>
             <div class="col col-66 col-center" ng-if="transfer.fromAccountId">
                 <label>
@@ -13,7 +14,7 @@
         </div>
         <div class ="row">
             <div class="col col-33  col-center " style="padding-top: 15px;padding-bottom: 15px;">
-                    <a  ng-click="showAccountSelector('to')">To Account<i class=" icon-right ion-chevron-right"></i></a>
+                    <a  ng-click="showAccountSelector('to')">To <i class=" icon-right ion-chevron-right"></i></a>
             </div>
             <div class="col col-66 col-center" ng-if="transfer.toAccountId">
                 <label>
@@ -22,7 +23,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col col-33  col-center">Transfer Amount</div>
+            <div class="col col-33  col-center">Amount</div>
             <div class="col col-66 col-center">
                 <input type="text" ng-model="transfer.amount">
             </div>

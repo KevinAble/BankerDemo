@@ -14,6 +14,14 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+$light:                           #fff !default;
+$stable:                          #E2E9EE !default;
+$positive:                        #005288 !default;
+$calm:                            #A1D6F4 !default;
+$balanced:                        #387C2B !default;
+$energized:                       #65B360 !default;
+$royal:                           #CCBBD7 !default;
+$dark:                            #807F83 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -21,4 +29,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 @import "scss/fancy-select.app.scss";
+@import "scss/cobankcolors.scss";
 
+.row-stable{background-color:#E2E9EE;color:$light}
+.row-positive{background-color: #005288 ;color:$light}
+.row-calm{background-color:#A1D6F4;color:$light}
+.row-balanced{background-color:#387C2B;color:#000}
+.row-energized{background-color:#65B360;color:#000}
+.row-royal{background-color:#CCBBD7;color:#000}
+.row-dark{background-color:#807F83 ;color:$light}

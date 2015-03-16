@@ -1,50 +1,18 @@
 <ion-view view-title="Transactions" ng-controller="TransactionCtrl as vm">
     <ion-content>
-        <div class="item item-divider item-balanced">
-            Account Transactions Summary 01/09/2014 <br/>
-            {{vm.accountid}}
+        <div style="border-bottom:  solid; border-top: solid;">
+            <div class="item item-divider item-positive">
+                Account Transactions Summary 01/09/2014 <br />
+                {{vm.accountid}}
+            </div>
+            <ul ng-repeat="transaction in vm.tranactions ">
+                <li class="item item-text-wrap">
+                   
+                        <div><b>{{transaction.date}} </b>{{transaction.description}}</div>
+                        <div class="text-right">{{transaction.amount}}</div>
+                    
+                </li>
+            </ul>
         </div>
-        <ul ng-repeat="transaction in vm.tranactions ">
-            <li class="item item-icon-right item-text-wrap item-stable">
-                <b>{{transaction.date}} </b>{{transaction.description}}
-                <span class="item-note">{{transaction.amount}}</span>
-            </li>
-            <!--<li class="item item-icon-right item-text-wrap item-light">
-            <b>01/09/2014</b> LOAN DISBURSE
-            <span class="item-note">16,423.00</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-stable">
-            <b>01/07/2014 </b>LOAN DISBURSE
-            <span class="item-note">321.39</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-light">
-            <b> 01/06/2014 </b>INTEREST ACCRUAL
-            <span class="item-note">14.91</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-stable">
-            <b>01/02/2014 </b>PRIN PMT
-            <span class="item-note">19,200.00</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-light">
-            <b> 12/30/2013 </b>LOAN DISBURSE
-            <span class="item-note">121.19</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-stable">
-            <b> 12/30/2013 </b>LOAN DISBURSE
-            <span class="item-note">2,300.00</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-light">
-            <b>12/27/2013 </b>LOAN DISBURSE
-            <span class="item-note">13,431.26</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-stable">
-            <b>12/27/2013 </b>INTEREST ACCRUAL
-            <span class="item-note">155.34</span>
-        </li>
-        <li class="item item-icon-right item-text-wrap item-light">
-            <b> 12/26/2013 </b>LOAN DISBURSE
-            <span class="item-note">927.33</span>
-        </li>-->
-        </ul>
     </ion-content>
 </ion-view>
